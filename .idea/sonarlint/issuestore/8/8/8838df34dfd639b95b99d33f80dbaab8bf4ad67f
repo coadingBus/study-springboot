@@ -1,0 +1,7 @@
+
+r	java:S127\"XRefactor the code in order to not assign to this loop counter from within the loop body.(‘¼Öˆùÿÿÿÿ
+r	java:S127]"XRefactor the code in order to not assign to this loop counter from within the loop body.(½¿€³ýÿÿÿÿ
+O
+java:S4719*"9Replace charset name argument with StandardCharsets.UTF_8(Î²÷à
+O
+java:S4719+"9Replace charset name argument with StandardCharsets.UTF_8(áò¹€
