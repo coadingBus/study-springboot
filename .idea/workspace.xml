@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="" />
+    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="学习springboot的简单案例">
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/CustomRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/HomeIndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/RouterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/static/qinjiang/css/qinstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/static/qinjiang/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/static/qinjiang/js/semantic.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level1/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level1/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level1/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level2/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level2/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level2/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level3/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level3/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/level3/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/controller/RouterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37824f8c73be2f5b90f5c3f72c9b459ed70867e7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37824f8c73be2f5b90f5c3f72c9b459ed70867e7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47cadf0cdae6e545361200d6ed4ac142f53e5e99" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47cadf0cdae6e545361200d6ed4ac142f53e5e99" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4af6035c9041fc789f506306abc7a9eaa14425e0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4af6035c9041fc789f506306abc7a9eaa14425e0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7da65ed5fb12e0a8e17d45e9d058c95cb878b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7da65ed5fb12e0a8e17d45e9d058c95cb878b2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c8879518a0212935a36dc0583722e7949477613" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c8879518a0212935a36dc0583722e7949477613" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8838df34dfd639b95b99d33f80dbaab8bf4ad67f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8838df34dfd639b95b99d33f80dbaab8bf4ad67f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9df995dada414e8ce5d088e99a5e3f4be58c5ac4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9df995dada414e8ce5d088e99a5e3f4be58c5ac4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3fb125ae22e78a1b194213dcad512b5e0c2fada" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3fb125ae22e78a1b194213dcad512b5e0c2fada" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b44e6dac3c07990b59d24a71c27d807e4d2f68c9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b44e6dac3c07990b59d24a71c27d807e4d2f68c9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf6ad03ccb8b3a0222655d44e6ff684bf5a7b8cf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf6ad03ccb8b3a0222655d44e6ff684bf5a7b8cf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/DomeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/DomeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/resources/templates/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/resources/templates/views/login.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +85,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
@@ -28,6 +100,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1h1nfa70s3rVoCZJGQ4SyJKsLvX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="compactDirectories" value="true" />
@@ -45,10 +120,13 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/spring-security/src/main/resources/static" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-security/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shiro-springboot/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -66,25 +144,25 @@
       <recent name="com.site" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study\study-springboot\spring-security\src\main\resources\templates" />
-      <recent name="D:\study\study-springboot\spring-security\src\main\resources\static" />
+      <recent name="D:\study\study-springboot\shiro-springboot\src\main\resources" />
+      <recent name="D:\study\study-springboot\shiro-springboot\src\main\resources\static" />
+      <recent name="D:\study\study-springboot\shiro-springboot\src\main\resources\templates" />
       <recent name="D:\study\study-springboot\spring-security\src\main\resources" />
-      <recent name="D:\study\study-springboot\poi\src\main\java\com\site\Apriori" />
-      <recent name="D:\study\study-springboot\timo\src\main\java\com\example\timo" />
+      <recent name="D:\study\study-springboot\spring-security\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.site.shiro.controller" />
       <recent name="com.example.timo.enums" />
       <recent name="com.example.timo.exception" />
       <recent name="com.example.timo.dao" />
       <recent name="com.example.timo.pojo" />
-      <recent name="com.example.timo.service.impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\study\study-springboot\slider\src" />
       <recent name="D:\study\study-springboot\springboot-easy-captcha2\src\main\resources\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DomeApplication">
+  <component name="RunManager" selected="Spring Boot.ShiroApplication">
     <configuration name="Thread2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.stie.lmk.Thread2" />
       <module name="ThreadPool" />
@@ -178,6 +256,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shiro-springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.site.shiro.ShiroApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TimoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="timo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.timo.TimoApplication" />
@@ -256,21 +341,48 @@
       <workItem from="1603036567097" duration="107000" />
       <workItem from="1603072622499" duration="8750000" />
       <workItem from="1603112415194" duration="1711000" />
+      <workItem from="1603159268310" duration="3797000" />
+      <workItem from="1603194751135" duration="8554000" />
+      <workItem from="1603246389001" duration="13077000" />
     </task>
+    <task id="LOCAL-00001" summary="学习springboot的简单案例">
+      <created>1603159513591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603159513591</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="学习springboot的简单案例" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习springboot的简单案例" />
   </component>
   <component name="WindowStateProjectService">
     <state x="615" y="339" key="#Assign_Data_Sources" timestamp="1602313545150">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="615" y="339" key="#Assign_Data_Sources/0.0.1440.920@0.0.1440.920" timestamp="1602313545150" />
-    <state x="201" y="35" key="#Project_Structure" timestamp="1601106956317">
+    <state x="201" y="35" key="#Project_Structure" timestamp="1603274084658">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="201" y="35" key="#Project_Structure/0.0.1440.920@0.0.1440.920" timestamp="1601106956317" />
+    <state x="201" y="35" key="#Project_Structure/0.0.1440.920@0.0.1440.920" timestamp="1603274084658" />
     <state x="218" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602247447642">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -287,10 +399,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="526" y="164" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1602334992987" />
-    <state x="451" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1601015722582">
+    <state x="451" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1603198547165">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="451" y="236" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1440.920@0.0.1440.920" timestamp="1601015722582" />
+    <state x="451" y="236" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1440.920@0.0.1440.920" timestamp="1603198547165" />
     <state x="339" y="111" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602241683059">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -307,62 +419,66 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="499" y="342" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1440.920@0.0.1440.920" timestamp="1603022106474" />
-    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602314528346">
+    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603284722917">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1602314528346" />
-    <state x="501" y="216" key="FileChooserDialogImpl" timestamp="1602238091837">
+    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1603284722917" />
+    <state x="501" y="216" key="FileChooserDialogImpl" timestamp="1603159298140">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="216" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1602238091837" />
-    <state width="1397" height="725" key="GridCell.Tab.0.bottom" timestamp="1603112721854">
+    <state x="501" y="216" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1603159298140" />
+    <state x="572" y="361" key="Github.ShareDialog" timestamp="1603159550213">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.0.center" timestamp="1603112721854">
+    <state x="572" y="361" key="Github.ShareDialog/0.0.1440.920@0.0.1440.920" timestamp="1603159550213" />
+    <state width="1397" height="617" key="GridCell.Tab.0.bottom" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.0.left" timestamp="1603112721853">
+    <state width="1397" height="617" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.0.center" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603112721853" />
-    <state width="1397" height="725" key="GridCell.Tab.0.right" timestamp="1603112721854">
+    <state width="1397" height="617" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.0.left" timestamp="1603286618836">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.1.bottom" timestamp="1603112721854">
+    <state width="1397" height="617" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603286618836" />
+    <state width="1397" height="617" key="GridCell.Tab.0.right" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.1.center" timestamp="1603112721854">
+    <state width="1397" height="617" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.1.bottom" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.1.left" timestamp="1603112721854">
+    <state width="1397" height="617" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.1.center" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="725" key="GridCell.Tab.1.right" timestamp="1603112721854">
+    <state width="1397" height="617" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.1.left" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="725" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1603112721854" />
-    <state width="1397" height="724" key="GridCell.Tab.2.bottom" timestamp="1599751041143">
+    <state width="1397" height="617" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="617" key="GridCell.Tab.1.right" timestamp="1603286618837">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="724" key="GridCell.Tab.2.bottom/0.0.1440.920@0.0.1440.920" timestamp="1599751041143" />
-    <state width="1397" height="724" key="GridCell.Tab.2.center" timestamp="1599751041143">
+    <state width="1397" height="617" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1603286618837" />
+    <state width="1397" height="311" key="GridCell.Tab.2.bottom" timestamp="1603204972039">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="724" key="GridCell.Tab.2.center/0.0.1440.920@0.0.1440.920" timestamp="1599751041143" />
-    <state width="1397" height="724" key="GridCell.Tab.2.left" timestamp="1599751041143">
+    <state width="1397" height="311" key="GridCell.Tab.2.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603204972039" />
+    <state width="1397" height="311" key="GridCell.Tab.2.center" timestamp="1603204972038">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="724" key="GridCell.Tab.2.left/0.0.1440.920@0.0.1440.920" timestamp="1599751041143" />
-    <state width="1397" height="724" key="GridCell.Tab.2.right" timestamp="1599751041143">
+    <state width="1397" height="311" key="GridCell.Tab.2.center/0.0.1440.920@0.0.1440.920" timestamp="1603204972038" />
+    <state width="1397" height="311" key="GridCell.Tab.2.left" timestamp="1603204972038">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="724" key="GridCell.Tab.2.right/0.0.1440.920@0.0.1440.920" timestamp="1599751041143" />
+    <state width="1397" height="311" key="GridCell.Tab.2.left/0.0.1440.920@0.0.1440.920" timestamp="1603204972038" />
+    <state width="1397" height="311" key="GridCell.Tab.2.right" timestamp="1603204972038">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="311" key="GridCell.Tab.2.right/0.0.1440.920@0.0.1440.920" timestamp="1603204972038" />
     <state x="301" y="195" key="IDE.errors.dialog" timestamp="1602554559929">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -383,10 +499,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="519" y="238" key="chooseDestDirectoryDialog/0.0.1440.920@0.0.1440.920" timestamp="1603113049876" />
-    <state x="64" y="35" width="1224" height="833" key="new project wizard" timestamp="1603112523394">
+    <state x="64" y="35" width="1224" height="833" key="new project wizard" timestamp="1603274137063">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="64" y="35" width="1224" height="833" key="new project wizard/0.0.1440.920@0.0.1440.920" timestamp="1603112523394" />
+    <state x="64" y="35" width="1224" height="833" key="new project wizard/0.0.1440.920@0.0.1440.920" timestamp="1603274137063" />
     <state x="377" y="211" key="run.anything.popup" timestamp="1600234533231">
       <screen x="0" y="0" width="1440" height="920" />
     </state>

@@ -11,6 +11,7 @@
         <module name="poi" />
         <module name="ThreadPool" />
         <module name="timo" />
+        <module name="shiro-springboot" />
         <module name="spring-security" />
         <module name="springboot-redis2" />
       </profile>
@@ -19,6 +20,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="String" options="-parameters" />
+      <module name="shiro-springboot" options="-parameters" />
       <module name="spring-security" options="-parameters" />
       <module name="springboot-redis2" options="-parameters" />
       <module name="timo" options="-parameters" />
