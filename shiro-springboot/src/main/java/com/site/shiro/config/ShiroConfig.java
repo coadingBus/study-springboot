@@ -1,6 +1,9 @@
 package com.site.shiro.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
+import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
@@ -15,17 +18,15 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-
-
 /**
  * @author Programmer Li
- *
- *
+ * <p>
+ * <p>
  * config配置过程
  * ShiroFilterFactoryBean
- *
+ * <p>
  * defaultWebSecurityManager
- *
+ * <p>
  * realm 对象的创建 （自定义）
  */
 @Configuration
@@ -38,16 +39,18 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+
         //添加过滤器
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
+        // 过滤规则
         // authc:所有url都必须认证通过才可以访问;
         // anon:所有url都都可以匿名访问;
         // user: 必须拥有记住我功能才能用;
         // perms：拥有对某个资源的权限才能访问;
         // roles：拥有某个角色权限才能访问
 
-        filterChainDefinitionMap.put("/webjars/**", "anon");
+        filterChainDefinitionMap.put("/toLogin", "anon");
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/front/**", "anon");
@@ -55,18 +58,30 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/admin/**", "authc");
         filterChainDefinitionMap.put("/views/**", "authc");
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
-        filterChainDefinitionMap.put("/**", "authc");
+        filterChainDefinitionMap.put("/**", "anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+        // 添加自己的过滤器并且取名为jwt
         return shiroFilterFactoryBean;
     }
 
     @Bean
     public SecurityManager securityManager() {
-        DefaultWebSecurityManager defaultSecurityManager = new DefaultWebSecurityManager();
-        defaultSecurityManager.setRealm(customRealm());
-        return defaultSecurityManager;
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setRealm(customRealm());
+        /*
+         * 关闭shiro自带的session，详情见文档,整合springboot就把下面注释掉
+         * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
+         */
+        DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
+        DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
+        defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
+        subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
+        securityManager.setSubjectDAO(subjectDAO);
+        return securityManager;
+
     }
 
+    ////这个是整合springboot的
     @Bean
     public CustomRealm customRealm() {
         CustomRealm customRealm = new CustomRealm();
@@ -75,6 +90,9 @@ public class ShiroConfig {
         customRealm.setCachingEnabled(false);
         return customRealm;
     }
+
+
+
 
 
     @Bean
@@ -104,7 +122,8 @@ public class ShiroConfig {
         return authorizationAttributeSourceAdvisor;
     }
 
-    @Bean(name = "credentialsMatcher")
+    //这里配置了加密算法
+    @Bean
     public HashedCredentialsMatcher hashedCredentialsMatcher() {
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
         // 散列算法:这里使用MD5算法;
@@ -116,6 +135,12 @@ public class ShiroConfig {
         return hashedCredentialsMatcher;
     }
 
+
+    //开启shiro和thymeleaf的注解
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
+    }
 
 
 }

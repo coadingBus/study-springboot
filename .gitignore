@@ -1,0 +1,39 @@
+### maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+.gitignore
+String/src/main/resources/static/
+String/src/main/resources/templates/
+ThreadPool/src/main/resources/
+ThreadPool/src/test/
+log/
+poi/src/test/
+shiro-springboot/.gitignore
+shiro-springboot/pom.xml
+shiro-springboot/src/main/java/com/site/shiro/ShiroApplication.java
+shiro-springboot/src/test/
+springboot-redis2/src/main/resources/static/
+springboot-redis2/src/main/resources/templates/

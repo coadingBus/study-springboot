@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="String" />
         <module name="poi" />
-        <module name="ThreadPool" />
-        <module name="timo" />
         <module name="shiro-springboot" />
+        <module name="ThreadPool" />
+        <module name="springboot-shiro-jwt" />
         <module name="spring-security" />
+        <module name="timo" />
         <module name="springboot-redis2" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="shiro-springboot" options="-parameters" />
       <module name="spring-security" options="-parameters" />
       <module name="springboot-redis2" options="-parameters" />
+      <module name="springboot-shiro-jwt" options="-parameters" />
       <module name="timo" options="-parameters" />
     </option>
   </component>

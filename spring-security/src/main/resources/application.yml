@@ -57,5 +57,9 @@ spring:
 mybatis-plus:
   type-aliases-package: com.site.dome.entity
   mapper-locations: classpath*:mapper/*.xml
+  #日志打印
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
 

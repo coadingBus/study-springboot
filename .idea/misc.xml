@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/timo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/shiro-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-shiro-jwt/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

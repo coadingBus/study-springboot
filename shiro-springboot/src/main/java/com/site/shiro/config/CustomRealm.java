@@ -9,26 +9,27 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * 自定义realm
- *
  */
 
 @Slf4j
 public class CustomRealm extends AuthorizingRealm {
 
+
+
+
+    //先认证，后授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
 
         log.info("-------身份授权方法--------");
         String username = (String) SecurityUtils.getSubject().getPrincipal();
+        log.info("username===========>" + username);
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();
         stringSet.add("user:show");
@@ -45,42 +46,21 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-       //log.info("-------身份认证方法--------");
-       // String userName = (String) authenticationToken.getPrincipal();
-       // String userPwd = new String((char[]) authenticationToken.getCredentials());
-       // log.info("用户名==>"+userName+"========pwd===>"+userPwd);
-       // //根据用户名从数据库获取密码
-       // String password = "123";
-       // if (userName == null) {
-       //     throw new AccountException("用户名不正确");
-       // } else if (!userPwd.equals(password )) {
-       //     throw new AccountException("密码不正确");
-       // }
-       // return new SimpleAuthenticationInfo(userName, password,getName());
-
-        System.out.println("-------身份认证方法--------");
+        log.info("-------身份认证方法--------");
         String userName = (String) authenticationToken.getPrincipal();
         String userPwd = new String((char[]) authenticationToken.getCredentials());
-        //根据用户名从数据库获取密码
-        String password = "123";
+        log.info("用户名==>" + userName + "========pwd===>" + userPwd);
+        //根据用户名从数据库获取密码 MD5Pwd("root","123") = 4fbe67902ad1551ceaf1b971bbca64ca 2415b95d3203ac901e287b76fcef640b=(cj,123)
+        String password = "4fbe67902ad1551ceaf1b971bbca64ca";
         if (userName == null) {
             throw new AccountException("用户名不正确");
-        } else if (!userPwd.equals(userPwd)) {
+        } else if (!password.equals(password)) {
             throw new AccountException("密码不正确");
         }
-        //交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配
-        return new SimpleAuthenticationInfo(userName, password,
-                ByteSource.Util.bytes(userName + "salt"), getName());
+        //交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配,对输入的密码加密然后对数据库上的数据进行对比
+        return new SimpleAuthenticationInfo(userName, password, ByteSource.Util.bytes(userName + "salt"), getName());
 
-    }
 
-    public static String MD5Pwd(String username, String pwd) {
-        // 加密算法MD5
-        // salt盐 username + salt
-        // 迭代次数
-        String md5Pwd = new SimpleHash("MD5", pwd,
-                ByteSource.Util.bytes(username + "salt"), 2).toHex();
-        return md5Pwd;
     }
 
 }
