@@ -19,22 +19,20 @@ import java.util.Set;
 
 @Slf4j
 public class CustomRealm extends AuthorizingRealm {
-
-
-
-
     //先认证，后授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-
         log.info("-------身份授权方法--------");
         String username = (String) SecurityUtils.getSubject().getPrincipal();
         log.info("username===========>" + username);
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();
+        Set<String> roleSet = new HashSet<>();
         stringSet.add("user:show");
         stringSet.add("user:admin");
+        roleSet.add("admin");
         info.setStringPermissions(stringSet);
+        info.setRoles(roleSet);
         return info;
     }
 

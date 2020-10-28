@@ -1,6 +1,5 @@
 package com.site.shiro.controller;
 
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +11,9 @@ public class RouterController {
 
     @GetMapping({"/", "/index"})
     public String index() {
-        log.info("这是登陆页面 日志测试");
         return "index";
     }
 
-    @GetMapping("/toLogin")
-    public String toLogin() {
-        return "login";
-    }
 
 
     @GetMapping("/level1/{id}")

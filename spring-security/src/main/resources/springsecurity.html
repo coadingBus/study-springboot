@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+判断用户是否已经登陆认证，引号内的参数必须是isAuthenticated()。
+sec:authorize="isAuthenticated()"
+
+获得当前用户的用户名，引号内的参数必须是name。
+sec:authentication=“name”
+
+判断当前用户是否拥有指定的权限。引号内的参数为权限的名称。
+sec:authorize=“hasRole(‘role’)”
+
+获得当前用户的全部角色，引号内的参数必须是principal.authorities。
+sec:authentication="principal.authorities"
+
+
+使用sec:authorize="isAuthenticated()" 判断是否登录 登录之后显示的页面内容
+<div sec:authorize="isAuthenticated()">
+    <h2><span sec:authentication="name"></span>,您好 您的身份是
+        <span sec:authentication="principal.authorities"></span>
+    </h2>
+</div>
+
+
+使用sec:authorize="hasRole('VIP1')"控制
+<div sec:authorize="hasRole('VIP1')">
+    <h3>我的VIP角色</h3>
+    <ul>
+        <li><a th:href="@{/level1/1}">免费阅读</a></li>
+        <li><a th:href="@{/level1/2}">购买8折</a></li>
+    </ul>
+</div>
+</body>
+</html>

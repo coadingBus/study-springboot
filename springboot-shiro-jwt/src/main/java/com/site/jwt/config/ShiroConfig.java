@@ -65,7 +65,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/toLogin", "anon");
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/", "anon");
-        filterChainDefinitionMap.put("/level1/**", "jwtFilter");
+        filterChainDefinitionMap.put("/level1/**", "jwtFilter,authc");
         filterChainDefinitionMap.put("/level2/**", "jwtFilter,authc");
         filterChainDefinitionMap.put("/level3/**", "jwtFilter,authc");
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
@@ -88,11 +88,11 @@ public class ShiroConfig {
          * 关闭shiro自带的session，详情见文档,整合springboot就把下面注释掉
          * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
          */
-        DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
-        DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
-        defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
-        subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
-        securityManager.setSubjectDAO(subjectDAO);
+        //DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
+        //DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
+        //defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
+        //subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
+        //securityManager.setSubjectDAO(subjectDAO);
         return securityManager;
 
     }

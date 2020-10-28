@@ -36,7 +36,7 @@ public class BaseRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken)
             throws AuthenticationException {
-        log.info("-------JwtRealm身份认证方法--------");
+        log.warn("-------BaseRealm身份认证方法--------");
         JwtToken jwtToken = (JwtToken) authcToken;
         if (jwtToken.getPrincipal() == null) {
             throw new AccountException("JWT token参数异常！");
@@ -51,20 +51,15 @@ public class BaseRealm extends AuthorizingRealm {
             throw new UnknownAccountException("用户不存在！");
         }
 
-        //// 用户被锁定
-        //if (user.getLocked()) {
-        //    throw new LockedAccountException("该用户已被锁定,暂时无法登录！");
-        //}
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, username, getName());
         return info;
     }
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        log.info("-------JwtRealm身份授权方法--------");
+        log.warn("-------BaseRealm身份授权方法--------");
         // 获取当前用户
         User currentUser = (User) SecurityUtils.getSubject().getPrincipal();
-        log.info("currentUser==========>"+currentUser);
         // UserEntity currentUser = (UserEntity) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();

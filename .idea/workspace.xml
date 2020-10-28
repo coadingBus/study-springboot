@@ -19,79 +19,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="学习shiro">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/exception/DefaultExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/exception/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/result/ResponseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/result/ResponseDataUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/ShiroUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/BaseRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtCredentialsMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/MultiRealmAuthenticator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/ExceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/exception/DefaultExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/exception/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResponseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResponseDataUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/ShiroUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/log4j2-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/css/qinstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/semantic.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/3.html" afterDir="false" />
+    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="shiro和jwt整合完毕">
+      <change afterPath="$PROJECT_DIR$/spring-security/src/main/resources/springsecurity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/CookieUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fdd68ba9-c89d-4344-a85f-0792b612d607.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fdd68ba9-c89d-4344-a85f-0792b612d607.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Programmer_Li.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Programmer_Li.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7da65ed5fb12e0a8e17d45e9d058c95cb878b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7da65ed5fb12e0a8e17d45e9d058c95cb878b2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/CustomRealm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/ShiroConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/HomeIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/HomeIndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/RouterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/controller/RouterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/java/com/site/dome/service/impl/UserServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/timo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/BaseRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/BaseRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,8 +58,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -123,10 +79,12 @@
   </component>
   <component name="ProjectId" id="1h1nfa70s3rVoCZJGQ4SyJKsLvX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="compactDirectories" value="true" />
     <option name="flattenModules" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -145,7 +103,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/log/warn/warn.log&#10;D:/study/study-springboot/shiro-springboot/pom.xml&#10;D:/study/study-springboot/shiro-springboot/src/main/java/com/site/shiro/ShiroApplication.java&#10;D:/study/study-springboot/springboot-shiro-jwt/HELP.md" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/log/info/info.log&#10;D:/study/study-springboot/log/warn/warn.log&#10;D:/study/study-springboot/shiro-springboot/pom.xml&#10;D:/study/study-springboot/log/debug/debug.log&#10;D:/study/study-springboot/shiro-springboot/src/main/java/com/site/shiro/ShiroApplication.java&#10;D:/study/study-springboot/springboot-shiro-jwt/HELP.md" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/spring-security/src/main/resources/static" />
@@ -156,7 +114,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -186,7 +144,7 @@
       <recent name="D:\study\study-springboot\shiro-springboot\src\main\java\com\site\shiro" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.JwtApplication">
+  <component name="RunManager" selected="Spring Boot.DomeApplication">
     <configuration name="CustomRealm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.site.shiro.config.CustomRealm" />
       <module name="shiro-springboot" />
@@ -213,19 +171,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Thread4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.stie.lmk.Thread4" />
-      <module name="ThreadPool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stie.lmk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="aprioriAlgorithm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.timo.Apriori.aprioriAlgorithm" />
       <module name="timo" />
@@ -245,6 +190,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.timo.Apriori.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.site.jwt.entity.test" />
+      <module name="springboot-shiro-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.site.jwt.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.ShiroUtil" />
         <item itemvalue="Application.CustomRealm" />
         <item itemvalue="Application.aprioriAlgorithm (1)" />
         <item itemvalue="Application.aprioriAlgorithm" />
-        <item itemvalue="Application.Thread4" />
       </list>
     </recent_temporary>
   </component>
@@ -379,6 +337,10 @@
       <workItem from="1603455342957" duration="7000" />
       <workItem from="1603456484873" duration="7472000" />
       <workItem from="1603507586497" duration="19408000" />
+      <workItem from="1603531973470" duration="7229000" />
+      <workItem from="1603594923035" duration="13963000" />
+      <workItem from="1603767320649" duration="1888000" />
+      <workItem from="1603873124539" duration="1599000" />
     </task>
     <task id="LOCAL-00001" summary="学习springboot的简单案例">
       <created>1603159513591</created>
@@ -401,7 +363,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603332297865</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="shiro和jwt整合完毕">
+      <created>1603532082315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603532082316</updated>
+    </task>
+    <task id="LOCAL-00005" summary="shiro和jwt整合完毕">
+      <created>1603532100451</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603532100451</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +399,8 @@
     <MESSAGE value="学习springboot的简单案例" />
     <MESSAGE value="学习shiro和springsecurity" />
     <MESSAGE value="学习shiro" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习shiro" />
+    <MESSAGE value="shiro和jwt整合完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="shiro和jwt整合完毕" />
   </component>
   <component name="WindowStateProjectService">
     <state x="615" y="339" key="#Assign_Data_Sources" timestamp="1602313545150">
@@ -482,38 +459,38 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="572" y="361" key="Github.ShareDialog/0.0.1440.920@0.0.1440.920" timestamp="1603159550213" />
-    <state width="1397" height="336" key="GridCell.Tab.0.bottom" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.0.bottom" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.0.center" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.0.center" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.0.left" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.0.left" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.0.right" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.0.right" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.1.bottom" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.1.bottom" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.1.center" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.1.center" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.1.left" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.1.left" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
-    <state width="1397" height="336" key="GridCell.Tab.1.right" timestamp="1603531426359">
+    <state width="1397" height="724" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
+    <state width="1397" height="724" key="GridCell.Tab.1.right" timestamp="1603874116452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="336" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1603531426359" />
+    <state width="1397" height="724" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1603874116452" />
     <state width="1397" height="336" key="GridCell.Tab.2.bottom" timestamp="1603531426359">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -538,22 +515,26 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="251" y="116" key="Maven.ArtifactSearchDialog/0.0.1440.920@0.0.1440.920" timestamp="1600776798733" />
-    <state x="222" y="70" key="SettingsEditor" timestamp="1603033284613">
+    <state x="222" y="70" key="SettingsEditor" timestamp="1603769740903">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="222" y="70" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1603033284613" />
+    <state x="222" y="70" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1603769740903" />
     <state x="442" y="202" width="591" height="540" key="StructurePopup" timestamp="1600761720208">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="442" y="202" width="591" height="540" key="StructurePopup/0.0.1440.920@0.0.1440.920" timestamp="1600761720208" />
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1603286894582">
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1603532108392">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1603286894581" />
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1603532108392" />
     <state x="519" y="238" key="chooseDestDirectoryDialog" timestamp="1603113049876">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="519" y="238" key="chooseDestDirectoryDialog/0.0.1440.920@0.0.1440.920" timestamp="1603113049876" />
+    <state x="517" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603873252047">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="517" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1603873252047" />
     <state x="64" y="35" width="1224" height="833" key="new project wizard" timestamp="1603520353808">
       <screen x="0" y="0" width="1440" height="920" />
     </state>

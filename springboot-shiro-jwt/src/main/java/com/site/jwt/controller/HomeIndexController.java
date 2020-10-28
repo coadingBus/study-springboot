@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
@@ -26,9 +28,11 @@ public class HomeIndexController {
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         @RequestParam("remember") String remember,
-                        ServletResponse response) {
+                        HttpServletRequest request,
+                        HttpServletResponse response) {
         // 从SecurityUtils里边创建一个 subject
         Subject subject = SecurityUtils.getSubject();
+
 
         // 在认证提交前准备 token（令牌）
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
@@ -59,7 +63,9 @@ public class HomeIndexController {
             // 若登录成功，签发 JWT token
             String jwtToken = JwtUtils.sign(username, JwtUtils.SECRET);
             // 将签发的 JWT token 设置到 HttpServletResponse 的 Header 中
-            ((HttpServletResponse) response).setHeader(JwtUtils.AUTH_HEADER, jwtToken);
+            Cookie cookie = new Cookie(JwtUtils.AUTH_HEADER,jwtToken);
+            response.addCookie(cookie);
+            //((HttpServletResponse) response).setHeader(JwtUtils.AUTH_HEADER, jwtToken);
             return "index";
         } else {
             token.clear();

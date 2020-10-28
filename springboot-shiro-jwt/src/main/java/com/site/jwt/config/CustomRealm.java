@@ -40,14 +40,11 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        log.info("-------CustomRealm身份认证方法--------");
+        log.warn("-------CustomRealm身份认证方法--------");
         // 从 AuthenticationToken 中获取当前用户
         String username = (String) token.getPrincipal();
         // 查询数据库获取用户信息，
         User user = userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserName,username));
-
-        log.info("user=========>"+user);
-
         // 用户不存在
         if (user == null) {
             throw new UnknownAccountException("用户不存在！");
@@ -73,10 +70,10 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        log.info("-------CustomRealm身份授权方法--------");
+        log.warn("-------CustomRealm身份授权方法--------");
         // 获取当前用户
         User currentUser = (User) SecurityUtils.getSubject().getPrincipal();
-        log.info("currentUser==========>"+currentUser);
+        log.warn("currentUser==========>"+currentUser);
         // UserEntity currentUser = (UserEntity) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();

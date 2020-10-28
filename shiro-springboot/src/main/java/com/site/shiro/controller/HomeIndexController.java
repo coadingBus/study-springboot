@@ -35,7 +35,7 @@ public class HomeIndexController {
             return "login";
         } catch (IncorrectCredentialsException ice) {
             log.error("密码不正确");
-            return "login";
+                return "login";
         } catch (LockedAccountException lae) {
             log.error("账户已锁定");
             return "login";

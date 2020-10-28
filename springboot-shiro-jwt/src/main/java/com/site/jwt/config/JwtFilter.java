@@ -4,9 +4,11 @@ import java.io.PrintWriter;
  
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.site.jwt.util.CookieUtils;
 import com.site.jwt.util.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationException;
@@ -14,13 +16,12 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
  
 /**
  * 自定义的认证过滤器，用来拦截Header中携带 JWT token的请求
+ * 因为放行了登陆请求，所以这里拦截其他的携带JWT token请求
  */
 @Slf4j
 public class JwtFilter extends BasicHttpAuthenticationFilter {
@@ -61,18 +62,9 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 		if (this.isLoginAttempt(request, response)) {
 			log.info("===============isLoginAttempt============");
 			return false;
+		}else {
+			return true;
 		}
-		boolean allowed = false;
-		try {
-			// 检测Header里的 JWT token内容是否正确，尝试使用 token进行登录
-			allowed = executeLogin(request, response);
-
-		} catch (IllegalStateException e) { // not found any token
-			log.error("Not found any token");
-		} catch (Exception e) {
-			log.error("Error occurs when login", e);
-		}
-		return allowed || super.isPermissive(mappedValue);
 	}
  
 	/**
@@ -80,32 +72,15 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 	 */
 	@Override
 	protected boolean isLoginAttempt(ServletRequest request, ServletResponse response) {
+		//String header = ((HttpServletRequest) request).getHeader(JwtUtils.AUTH_HEADER);
+		Cookie[] cookies = ((HttpServletRequest) request).getCookies();
+		Cookie cookie = CookieUtils.getCookie(cookies, JwtUtils.AUTH_HEADER);
+		String token = cookie.getValue();
+		log.info("token==>"+token);
+		//log.info("header==>"+header);
+		return token == null;
+	}
 
-		String header = ((HttpServletRequest) request).getHeader(JwtUtils.AUTH_HEADER);
-		log.info("header==>"+header);
-		return ((HttpServletRequest) request).getHeader(JwtUtils.AUTH_HEADER) == null;
-	}
- 
-	/**
-	 * 身份验证,检查 JWT token 是否合法
-	 */
-	@Override
-	protected boolean executeLogin(ServletRequest request, ServletResponse response) throws Exception {
-		AuthenticationToken token = createToken(request, response);
-		log.info("===============executeLogin============");
-		if (token == null) {
-			String msg = "createToken method implementation returned null. A valid non-null AuthenticationToken "
-					+ "must be created in order to execute a login attempt.";
-			throw new IllegalStateException(msg);
-		}
-		try {
-			Subject subject = getSubject(request, response);
-			subject.login(token); // 交给 Shiro 去进行登录验证
-			return onLoginSuccess(token, subject, request, response);
-		} catch (AuthenticationException e) {
-			return onLoginFailure(token, e, request, response);
-		}
-	}
  
 	/**
 	 * 从 Header 里提取 JWT token
@@ -134,34 +109,25 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 		return false;
 	}
  
-	/**
-	 * Shiro 利用 JWT token 登录成功，会进入该方法
-	 */
-	@Override
-	protected boolean onLoginSuccess(AuthenticationToken token, Subject subject, ServletRequest request,
-			ServletResponse response) throws Exception {
+	///**
+	// * Shiro 利用 JWT token 登录成功，会进入该方法
+	// */
+	//@Override
+	//protected boolean onLoginSuccess(AuthenticationToken token, Subject subject, ServletRequest request,
+	//		ServletResponse response) throws Exception {
+	//
+	//	log.info("===============onLoginSuccess============");
+	//	HttpServletResponse httpResponse = WebUtils.toHttp(response);
+	//	String newToken = null;
+	//	if (token instanceof JwtToken) {
+	//		newToken = JwtUtils.refreshTokenExpired(token.getCredentials().toString(), JwtUtils.SECRET);
+	//	}
+	//	if (newToken != null) {
+	//		httpResponse.setHeader(JwtUtils.AUTH_HEADER, newToken);
+	//	}
+	//	return true;
+	//}
 
-		log.info("===============onLoginSuccess============");
-		HttpServletResponse httpResponse = WebUtils.toHttp(response);
-		String newToken = null;
-		if (token instanceof JwtToken) {
-			newToken = JwtUtils.refreshTokenExpired(token.getCredentials().toString(), JwtUtils.SECRET);
-		}
-		if (newToken != null) {
-			httpResponse.setHeader(JwtUtils.AUTH_HEADER, newToken);
-		}
-		return true;
-	}
- 
-	/**
-	 * Shiro 利用 JWT token 登录失败，会进入该方法
-	 */
-	@Override
-	protected boolean onLoginFailure(AuthenticationToken token, AuthenticationException e, ServletRequest request,
-			ServletResponse response) {
-		// 此处直接返回 false ，交给后面的  onAccessDenied()方法进行处理
-		return false;
-	}
  
 	/**
 	 * 添加跨域支持

@@ -15,11 +15,6 @@ public class RouterController {
         return "index";
     }
 
-    @GetMapping("/toLogin")
-    public String toLogin() {
-        return "login";
-    }
-
 
     @GetMapping("/level1/{id}")
     public String level1(@PathVariable("id") int id) {
