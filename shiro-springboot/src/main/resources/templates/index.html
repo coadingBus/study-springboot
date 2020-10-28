@@ -21,7 +21,7 @@
             <!--登录注销-->
             <div class="right menu">
                 <!--未登录-->
-                <div  >
+                <div shiro:guest="" >
                     <a class="item" th:href="@{/login}">
                         <i class="address card icon"></i> 登录
                     </a>
@@ -53,7 +53,7 @@
     <div>
         <br>
         <div class="ui three column stackable grid">
-            <div class="column" shiro:hasPermission="user:admin">
+            <div class="column" shiro:hasPermission="user:vip1">
                 <div class="ui raised segment">
                     <div class="ui">
                         <div class="content" >
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="column" shiro:hasRole="admin">
+            <div class="column" shiro:hasPermission="user:vip2">
                 <div class="ui raised segment">
                     <div class="ui">
                         <div class="content"  >
@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="column" shiro:hasPermission="user:show">
+            <div class="column" shiro:hasPermission="user:vip3">
                 <div class="ui raised segment">
                     <div class="ui">
                         <div class="content"  >

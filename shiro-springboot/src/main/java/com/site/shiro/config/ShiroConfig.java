@@ -74,12 +74,12 @@ public class ShiroConfig {
 
     }
 
-    ////这个是整合springboot的
     @Bean
     public CustomRealm customRealm() {
         CustomRealm customRealm = new CustomRealm();
         // 告诉realm,使用credentialsMatcher加密算法类来验证密文
         customRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        //这里是关闭了缓存
         customRealm.setCachingEnabled(false);
         return customRealm;
     }

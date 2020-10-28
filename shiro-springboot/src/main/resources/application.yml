@@ -4,12 +4,3 @@ server:
 spring:
   thymeleaf:
     cache: false
-  datasource:
-    #    mysql5.7用下面这个驱动
-    #    driver-class-name: com.mysql.jdbc.Driver
-    #    mysql8用下面的这个驱动
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
-    url: jdbc:mysql://localhost/lmkstudy?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowMultiQueries=true
-

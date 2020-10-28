@@ -17,6 +17,6 @@ public class ShiroUtil {
 
     //测试用户 username：root; pwd：root 加密后为cf66e4783ae3d28612c4bd49d75181a9 ;
     public static void main(String[] args) {
-        System.out.println(ShiroUtil.MD5Pwd("root", "root"));
+        System.out.println(ShiroUtil.MD5Pwd("guest", "123"));
     }
 }

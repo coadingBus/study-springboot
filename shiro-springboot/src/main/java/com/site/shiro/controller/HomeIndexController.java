@@ -47,7 +47,7 @@ public class HomeIndexController {
             return "login";
         }
         if (subject.isAuthenticated()) {
-            return "index";
+            return "redirect:/";
         } else {
             token.clear();
             log.error("登陆失败");
@@ -60,7 +60,7 @@ public class HomeIndexController {
         // 从SecurityUtils里边创建一个 subject
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "/login";
+        return "redirect:/login";
     }
 
 }
