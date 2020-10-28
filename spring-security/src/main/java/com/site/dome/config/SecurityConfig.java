@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         //在内存中定义，也可以在jdbc中去拿....
         auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
-                .withUser("kuangshen").password(new BCryptPasswordEncoder().encode("123456")).roles("vip2", "vip3")
+                .withUser("lenyuqin").password(new BCryptPasswordEncoder().encode("123456")).roles("vip2", "vip3")
                 .and()
                 .withUser("root").password(new BCryptPasswordEncoder().encode("123456")).roles("vip1", "vip2", "vip3")
                 .and()
