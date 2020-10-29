@@ -1,9 +1,6 @@
 package com.site.jwt.config;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.site.jwt.entity.User;
-import com.site.jwt.entity.UserEntity;
-import com.site.jwt.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -14,6 +11,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,8 +22,20 @@ import java.util.Set;
 public class CustomRealm extends AuthorizingRealm {
 
 
-    @Resource
-    private UserService userService;
+    private static HashMap<String, String> map = new HashMap<>();
+
+
+    //模拟数据库  密码都是123
+    static {
+        //根据用户名从数据库获取密码 MD5Pwd("root","123")
+        // 335c38d67ad98270cd236398be193804=(lenyuqin,123)
+        // c7b5a4b3d344cd1ee759b954b6a2e75d=(guest,123)
+        // 4fbe67902ad1551ceaf1b971bbca64ca=(root,123)
+        map.put("lenyuqin", "335c38d67ad98270cd236398be193804");
+        map.put("guest", "c7b5a4b3d344cd1ee759b954b6a2e75d");
+        map.put("root", "4fbe67902ad1551ceaf1b971bbca64ca");
+    }
+
 
     /**
      * 限定这个 Realm 只处理 UsernamePasswordToken
@@ -43,15 +53,14 @@ public class CustomRealm extends AuthorizingRealm {
         log.warn("-------CustomRealm身份认证方法--------");
         // 从 AuthenticationToken 中获取当前用户
         String username = (String) token.getPrincipal();
-        // 查询数据库获取用户信息，
-        User user = userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserName,username));
+        String pwd = map.get(username);
         // 用户不存在
-        if (user == null) {
+        if (pwd == null) {
             throw new UnknownAccountException("用户不存在！");
         }
 
         // 使用用户名作为盐值
-        ByteSource credentialsSalt = ByteSource.Util.bytes(username+"salt");
+        ByteSource credentialsSalt = ByteSource.Util.bytes(username + "salt");
 
         /**
          * 将获取到的用户数据封装成 AuthenticationInfo 对象返回，此处封装为 SimpleAuthenticationInfo 对象。
@@ -60,7 +69,7 @@ public class CustomRealm extends AuthorizingRealm {
          *  参数3. 盐值
          *  参数4. 当前 Realm 对象的名称，直接调用父类的 getName() 方法即可
          */
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getUserPassword(), credentialsSalt,
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, pwd, credentialsSalt,
                 getName());
         return info;
     }
@@ -73,7 +82,7 @@ public class CustomRealm extends AuthorizingRealm {
         log.warn("-------CustomRealm身份授权方法--------");
         // 获取当前用户
         User currentUser = (User) SecurityUtils.getSubject().getPrincipal();
-        log.warn("currentUser==========>"+currentUser);
+        log.warn("currentUser==========>" + currentUser);
         // UserEntity currentUser = (UserEntity) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();

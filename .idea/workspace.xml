@@ -20,22 +20,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="springsecurity 总结完成">
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/HttpServletUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/ToolUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/annotation/IgnorePermissions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/annotation/JwtPermissions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/annotation/JwtPermissionsAop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/UserAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/enums/JwtResultEnums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/AuthenticationInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtInterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtProjectProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResultException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResultVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResultVoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/URL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/HttpServletUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/ToolUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/core.util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Programmer_Li.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Programmer_Li.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/CustomRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/HomeIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/controller/HomeIndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/exception/DefaultExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/exception/MyException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/result/ResponseData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/result/ResponseDataUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/ShiroUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/site/shiro/util/ShiroUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/BaseRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtCredentialsMatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/JwtToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/MultiRealmAuthenticator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/ShiroRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/ArticleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/ExceptionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/exception/DefaultExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/exception/MyException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/BaseResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResponseData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResponseDataUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/CookieUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/JwtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +133,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/spring-security/src/main/resources/static" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -109,28 +146,28 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\study-springboot\shiro-springboot\src\main\resources\templates" />
-      <recent name="D:\study\study-springboot\slider\src" />
-      <recent name="D:\study\study-springboot\springboot-easy-captcha2\src\main\resources\templates" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.timo" />
       <recent name="com.site" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.site.shiro.util" />
-      <recent name="com.site.shiro.filter" />
-      <recent name="com.site.shiro.config" />
-      <recent name="com.site.shiro.controller" />
-      <recent name="com.example.timo.enums" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\resources\static\qinjiang\js" />
+      <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\java\com\site\jwt" />
+      <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\java\com\site\jwt\annotation" />
       <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\resources\static" />
       <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\resources\templates" />
-      <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\resources" />
-      <recent name="D:\study\study-springboot\springboot-shiro-jwt\src\main\java\com\site\jwt" />
-      <recent name="D:\study\study-springboot\shiro-springboot\src\main\java\com\site\shiro" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.site.jwt.result" />
+      <recent name="com.site.jwt.config" />
+      <recent name="com.site.jwt.util" />
+      <recent name="com.site.jwt.annotation" />
+      <recent name="com.site.shiro.util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\study-springboot\shiro-springboot\src\main\resources\templates" />
+      <recent name="D:\study\study-springboot\slider\src" />
+      <recent name="D:\study\study-springboot\springboot-easy-captcha2\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ShiroApplication">
@@ -332,6 +369,9 @@
       <workItem from="1603873124539" duration="3506000" />
       <workItem from="1603876863866" duration="248000" />
       <workItem from="1603890847571" duration="6000000" />
+      <workItem from="1603940920194" duration="106000" />
+      <workItem from="1603941856872" duration="822000" />
+      <workItem from="1603956653919" duration="6852000" />
     </task>
     <task id="LOCAL-00001" summary="学习springboot的简单案例">
       <created>1603159513591</created>
@@ -454,10 +494,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="499" y="342" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1440.920@0.0.1440.920" timestamp="1603022106474" />
-    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603520390735">
+    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603981823916">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1603520390735" />
+    <state x="451" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1603981823916" />
     <state x="501" y="216" key="FileChooserDialogImpl" timestamp="1603159298140">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -530,6 +570,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="442" y="202" width="591" height="540" key="StructurePopup/0.0.1440.920@0.0.1440.920" timestamp="1600761720208" />
+    <state width="498" height="588" key="SwitcherDM" timestamp="1603974525677">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="498" height="588" key="SwitcherDM/0.0.1440.920@0.0.1440.920" timestamp="1603974525677" />
     <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1603876969342">
       <screen x="0" y="0" width="1440" height="920" />
     </state>

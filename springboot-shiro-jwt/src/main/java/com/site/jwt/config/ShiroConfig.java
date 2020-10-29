@@ -20,10 +20,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -48,10 +45,12 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
 
-        // 添加 jwt 专用过滤器，拦截除 /login 和 /logout 外的请求
-        Map<String, Filter> filterMap = new LinkedHashMap<>();
-        filterMap.put("jwtFilter", jwtFilter());
-        shiroFilterFactoryBean.setFilters(filterMap);
+        /*
+         * 添加自定义拦截器，重写user认证方式，处理session超时问题
+         */
+        HashMap<String, Filter> myFilters = new HashMap<>(16);
+        myFilters.put("userAuth", new UserAuthFilter());
+        shiroFilterFactoryBean.setFilters(myFilters);
 
         //添加过滤器
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
@@ -65,11 +64,12 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/toLogin", "anon");
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/", "anon");
-        filterChainDefinitionMap.put("/level1/**", "jwtFilter,authc");
-        filterChainDefinitionMap.put("/level2/**", "jwtFilter,authc");
-        filterChainDefinitionMap.put("/level3/**", "jwtFilter,authc");
+        filterChainDefinitionMap.put("/qinjiang/**", "anon");
+        //filterChainDefinitionMap.put("/level1/**", "authc");
+        //filterChainDefinitionMap.put("/level2/**", "authc");
+        //filterChainDefinitionMap.put("/level3/**", "authc");
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
-        filterChainDefinitionMap.put("/**", "anon");
+        filterChainDefinitionMap.put("/**", "userAuth");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         // 添加自己的过滤器并且取名为jwt
         return shiroFilterFactoryBean;
@@ -79,11 +79,7 @@ public class ShiroConfig {
     public DefaultWebSecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         // 2.Realm
-        List<Realm> realms = new ArrayList<Realm>(16);
-        realms.add(baseRealm());
-        realms.add(customRealm());
-
-        securityManager.setRealms(realms);
+        securityManager.setRealm(customRealm());
         /*
          * 关闭shiro自带的session，详情见文档,整合springboot就把下面注释掉
          * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
@@ -98,35 +94,7 @@ public class ShiroConfig {
     }
 
 
-    @Bean
-    public JwtFilter jwtFilter() {
-        return new JwtFilter();
-    }
 
-    /**
-     * 配置 ModularRealmAuthenticator
-     */
-    @Bean
-    public ModularRealmAuthenticator authenticator() {
-        ModularRealmAuthenticator authenticator = new MultiRealmAuthenticator();
-        // 设置多 Realm的认证策略，默认 AtLeastOneSuccessfulStrategy
-        AuthenticationStrategy strategy = new FirstSuccessfulStrategy();
-        authenticator.setAuthenticationStrategy(strategy);
-        return authenticator;
-    }
-
-    /**
-     * BaseRealm 配置，需实现 Realm 接口
-     */
-    @Bean
-    BaseRealm baseRealm() {
-        BaseRealm baseRealm = new BaseRealm();
-        // 设置加密算法
-        CredentialsMatcher credentialsMatcher = new JwtCredentialsMatcher();
-        // 设置加密次数
-        baseRealm.setCredentialsMatcher(credentialsMatcher);
-        return baseRealm;
-    }
 
     /**
      * CustomRealm 配置，需实现 Realm 接口
@@ -141,43 +109,9 @@ public class ShiroConfig {
     }
 
 
-    /**
-     * JwtRealm 配置，需实现 Realm 接口
-     */
-    @Bean
-    JwtRealm jwtRealm() {
-        JwtRealm jwtRealm = new JwtRealm();
-        // 设置加密算法
-        CredentialsMatcher credentialsMatcher = new JwtCredentialsMatcher();
-        // 设置加密次数
-        jwtRealm.setCredentialsMatcher(credentialsMatcher);
-        return jwtRealm;
-    }
-
-    /**
-     * ShiroRealm 配置，需实现 Realm 接口
-     */
-    @Bean
-    ShiroRealm shiroRealm() {
-        ShiroRealm shiroRealm = new ShiroRealm();
-        // 设置加密算法
-        HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher("SHA-1");
-        // 设置加密次数
-        credentialsMatcher.setHashIterations(16);
-        shiroRealm.setCredentialsMatcher(credentialsMatcher);
-        return shiroRealm;
-    }
 
 
 
-    //@Bean
-    //public CustomRealm customRealm() {
-    //    CustomRealm customRealm = new CustomRealm();
-    //    // 告诉realm,使用credentialsMatcher加密算法类来验证密文
-    //    customRealm.setCredentialsMatcher(hashedCredentialsMatcher());
-    //    customRealm.setCachingEnabled(false);
-    //    return customRealm;
-    //}
 
 
     @Bean
