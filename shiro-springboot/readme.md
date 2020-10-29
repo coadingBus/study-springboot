@@ -569,7 +569,7 @@ public class RouterController {
 
 - **首页**
 
-![image-20201028165837054](D:\谷歌游览器\软件\Typora\Typora\note\studyNote\springboot shiro整合.assets\08a87b749279aec43113816ce5e9f995-1603896144526.png)
+![image-20201028165837054](https://img-blog.csdnimg.cn/img_convert/08a87b749279aec43113816ce5e9f995.png#pic_center)
 
 - **登陆页面**
 
