@@ -19,36 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="注解形式的整合shiro和JWT，目前后端部分已经完成，前端部分还需要完善ajax">
-      <change afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/layui.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="e2329b9e-5033-4d52-be53-2fae7ddf9de9" name="Default Changelist" comment="注解形式的整合shiro和JWT，前端部分也已经完成，项目整合完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/annotation/JwtPermissionsAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/annotation/JwtPermissionsAop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/CustomRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/UserAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/config/UserAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/HomeIndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/controller/RouterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtInterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtInterceptorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtProjectProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/interceptor/JwtProjectProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResultVoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/result/ResultVoUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/java/com/site/jwt/util/ToolUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/core.util.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/core.util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/static/qinjiang/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level1/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level2/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-shiro-jwt/src/main/resources/templates/views/level3/3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +324,7 @@
       <workItem from="1603956653919" duration="7521000" />
       <workItem from="1604032866271" duration="2570000" />
       <workItem from="1604036512052" duration="19066000" />
-      <workItem from="1604118071762" duration="5011000" />
+      <workItem from="1604118071762" duration="9111000" />
     </task>
     <task id="LOCAL-00001" summary="学习springboot的简单案例">
       <created>1603159513591</created>
@@ -409,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603983344661</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="注解形式的整合shiro和JWT，前端部分也已经完成，项目整合完成">
+      <created>1604127429285</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604127429285</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +415,8 @@
     <MESSAGE value="springsecurity项目的完善和总结" />
     <MESSAGE value="springsecurity 总结完成" />
     <MESSAGE value="注解形式的整合shiro和JWT，目前后端部分已经完成，前端部分还需要完善ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="注解形式的整合shiro和JWT，目前后端部分已经完成，前端部分还需要完善ajax" />
+    <MESSAGE value="注解形式的整合shiro和JWT，前端部分也已经完成，项目整合完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="注解形式的整合shiro和JWT，前端部分也已经完成，项目整合完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="615" y="339" key="#Assign_Data_Sources" timestamp="1602313545150">
@@ -494,38 +475,38 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="572" y="361" key="Github.ShareDialog/0.0.1440.920@0.0.1440.920" timestamp="1603159550213" />
-    <state width="1397" height="579" key="GridCell.Tab.0.bottom" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.0.bottom" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.0.center" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.0.center" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.0.left" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.0.left" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.0.right" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.0.right" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.1.bottom" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.1.bottom" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.1.center" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.1.center" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.1.left" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.1.left" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
-    <state width="1397" height="579" key="GridCell.Tab.1.right" timestamp="1604127341853">
+    <state width="1397" height="725" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
+    <state width="1397" height="725" key="GridCell.Tab.1.right" timestamp="1604131697509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="579" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1604127341853" />
+    <state width="1397" height="725" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1604131697509" />
     <state width="1397" height="336" key="GridCell.Tab.2.bottom" timestamp="1603531426359">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -562,10 +543,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="498" height="588" key="SwitcherDM/0.0.1440.920@0.0.1440.920" timestamp="1603974525677" />
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1603983841887">
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1604127439502">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1603983841887" />
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1604127439502" />
     <state x="519" y="238" key="chooseDestDirectoryDialog" timestamp="1603113049876">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
