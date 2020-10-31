@@ -7,8 +7,6 @@ import java.lang.annotation.Target;
 
 /**
  * jwt权限注解（需要权限）
- * @author 小懒虫
- * @date 2019/4/13
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

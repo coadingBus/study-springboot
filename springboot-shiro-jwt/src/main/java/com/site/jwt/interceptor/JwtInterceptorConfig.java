@@ -10,8 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * jwt权限配置拦截器,这里可以进行路径拦截
  *
- * @author 小懒虫
- * @date 2019/4/12
  */
 @Configuration
 @ConditionalOnProperty(name = "project.jwt.pattern-path", havingValue = "true")//这个注解相当于读取配置文件

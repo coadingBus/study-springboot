@@ -20,8 +20,6 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Jwt权限注解AOP
  * 通过注解拦截，只需要在需要拦截的接口上添加@JwtPermissions即可
- * @author 小懒虫
- * @date 2019/4/13
  */
 @Aspect
 @Component

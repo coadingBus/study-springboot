@@ -18,12 +18,9 @@ import java.util.Date;
 import java.util.Random;
 
 import static com.site.jwt.util.HttpServletUtil.getRequest;
-import static com.site.jwt.util.HttpServletUtil.getServletRequest;
 
-/**
- * @author 小懒虫
- * @date 2019/4/9
- */
+
+
 @Slf4j
 public class JwtUtil {
 

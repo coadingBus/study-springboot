@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 处理session超时问题拦截器
- * @author 小懒虫
- * @date 2018/8/14
  */
 @Slf4j
 public class UserAuthFilter extends AccessControlFilter {

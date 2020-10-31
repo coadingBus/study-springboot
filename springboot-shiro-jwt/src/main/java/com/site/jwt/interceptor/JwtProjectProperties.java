@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * jwt配置项
  * 相当于在yml中写配置
- * @author 小懒虫
- * @date 2019/4/13
  */
 @Data
 @Configuration
