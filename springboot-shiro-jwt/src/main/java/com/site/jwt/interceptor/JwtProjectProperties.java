@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "project.jwt")
+@ConfigurationProperties(prefix = "project.jwt")//动态的写配置文件
 public class JwtProjectProperties {
 
     /** jwt秘钥 */

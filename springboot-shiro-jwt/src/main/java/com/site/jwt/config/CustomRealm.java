@@ -10,7 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
-import javax.annotation.Resource;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -53,6 +53,7 @@ public class CustomRealm extends AuthorizingRealm {
         log.warn("-------CustomRealm身份认证方法--------");
         // 从 AuthenticationToken 中获取当前用户
         String username = (String) token.getPrincipal();
+        log.info("username======>"+username);
         String pwd = map.get(username);
         // 用户不存在
         if (pwd == null) {
@@ -79,15 +80,27 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        log.warn("-------CustomRealm身份授权方法--------");
-        // 获取当前用户
-        User currentUser = (User) SecurityUtils.getSubject().getPrincipal();
-        log.warn("currentUser==========>" + currentUser);
-        // UserEntity currentUser = (UserEntity) principals.getPrimaryPrincipal();
+        log.info("-------身份授权方法--------");
+        String username = (String) SecurityUtils.getSubject().getPrincipal();
+        log.info("username===========>" + username);
+
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();
-        stringSet.add("user:show");
-        stringSet.add("user:admin");
+        Set<String> roleSet = new HashSet<>();
+
+        if ("lenyuqin".equals(username)) {
+            stringSet.add("user:vip1");
+            stringSet.add("user:vip2");
+        }
+        if ("guest".equals(username)) {
+            stringSet.add("user:vip2");
+            stringSet.add("user:vip3");
+        }
+        if ("root".equals(username)) {
+            stringSet.add("user:vip1");
+            stringSet.add("user:vip2");
+            stringSet.add("user:vip3");
+        }
         info.setStringPermissions(stringSet);
         return info;
     }

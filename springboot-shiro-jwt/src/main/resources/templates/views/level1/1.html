@@ -22,8 +22,21 @@
 </div>
 
 
-<script th:src="@{/qinjiang/js/jquery-3.1.1.min.js}"></script>
-<script th:src="@{/qinjiang/js/semantic.min.js}"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+<script type="text/javascript" th:src="@{/qinjiang/js/core.util.js}"></script>
+<script type="text/javascript" th:src="@{/qinjiang/js/semantic.min.js}"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/layui/2.4.3/layui.all.js"></script>
 
+<script>
+
+    // 加载页面内容
+    $(function () {
+        CoreUtil.sendAjax("/home",null, function (res) {
+            console.log(res.data);
+            $("h3").text(res.data);
+        },"GET",false)
+    });
+
+</script>
 </body>
 </html>

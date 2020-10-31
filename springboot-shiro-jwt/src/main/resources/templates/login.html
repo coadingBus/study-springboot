@@ -22,7 +22,7 @@
             <div class="ui column very relaxed stackable grid">
                 <div class="column">
                     <div class="ui form">
-                        <form th:action="@{/login}" method="post">
+                        <form id="form1">
                             <div class="field">
                                 <label>Username</label>
                                 <div class="ui left icon input">
@@ -41,8 +41,7 @@
                                 <input type="hidden" name="remember" value="0">
                                 <input type="checkbox" name="remember" value="1"/>记住我
                             </div>
-
-                            <input type="submit" class="ui blue submit button"/>
+                            <input id="submit" onclick="login()" type="button" value="提交" class="ui blue submit button"/>
                         </form>
                     </div>
                 </div>
@@ -53,8 +52,6 @@
             <div class="ui label">
                 </i>注册
             </div>
-            <br><br>
-            <small>blog.kuangstudy.com</small>
         </div>
         <div class="ui segment" style="text-align: center">
             <h3>Spring Security Study</h3>
@@ -63,9 +60,46 @@
 
 
 </div>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+<script type="text/javascript" src="./qinjiang/js/semantic.min.js"></script>
+<script type="text/javascript" src="./qinjiang/js/core.util.js"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/layui/2.4.3/layui.all.js"></script>
 
-<script th:src="@{/static/qinjiang/js/jquery-3.1.1.min.js}"></script>
-<script th:src="@{/static/qinjiang/js/semantic.min.js}"></script>
 
+
+<script type="text/javascript">
+
+    function login() {
+        // console.log(getFormData(form1))
+        CoreUtil.sendAjax("/login", JSON.stringify(getFormData(form1)), function (res) {
+            console.log(res.data);
+            CoreUtil.setData("access_token", res.data.access_token);
+            CoreUtil.setData("refresh_token", res.data.access_token);
+            window.location.href = "/";
+        })
+
+
+    };
+
+
+    //jquery 获取form表单数据通用方法
+    function getFormData(formId){
+        var data = {};
+        var results = $(formId).serializeArray();
+        $.each(results,function(index,item){
+            //文本表单的值不为空才处理
+            if(item.value && $.trim(item.value)!=""){
+                if(!data[item.name]){
+                    data[item.name]=item.value;
+                }else{
+                    //name属性相同的表单，值以英文,拼接
+                    data[item.name]=data[item.name]+','+item.value;
+                }
+            }
+        });
+        //console.log(data);
+        return data;
+    }
+</script>
 </body>
 </html>

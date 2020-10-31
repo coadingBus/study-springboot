@@ -22,7 +22,7 @@ public class ResultVoUtil {
     public static <T> ResultVo<T> success(String msg, T object) {
         ResultVo<T> resultVo = new ResultVo<>();
         resultVo.setMsg(msg);
-        resultVo.setCode(ResultEnum.SUCCESS.getCode());
+        resultVo.setCode(ResultEnum.SUCCESS_ONE.getCode());
         resultVo.setData(object);
         return resultVo;
     }
@@ -47,7 +47,7 @@ public class ResultVoUtil {
      * @param object 对象
      */
     public static <T> ResultVo<T> success(T object) {
-        String message = ResultEnum.SUCCESS.getMessage();
+        String message = ResultEnum.SUCCESS_ONE.getMessage();
         return success(message, object);
     }
 

@@ -2,6 +2,7 @@ package com.site.jwt.controller;
 
 
 import com.site.jwt.annotation.IgnorePermissions;
+import com.site.jwt.entity.User;
 import com.site.jwt.interceptor.JwtProjectProperties;
 import com.site.jwt.result.ResultVo;
 import com.site.jwt.result.ResultVoUtil;
@@ -14,14 +15,9 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 
 @Slf4j
@@ -40,17 +36,18 @@ public class HomeIndexController {
     @IgnorePermissions
     @ResponseBody
     @PostMapping(value = "/login")
-    public ResultVo login(@RequestParam("username") String username,
-                          @RequestParam("password") String password,
-                          @RequestParam("remember") String remember) {
+    public ResultVo login(@RequestBody User user) {
+
+        log.info("=========登陆测试===========");
         // 从SecurityUtils里边创建一个 subject
         Subject subject = SecurityUtils.getSubject();
+        log.info("==>" + user);
 
         // 在认证提交前准备 token（令牌）
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
         // 执行认证登陆
         //账户注册的时候要调用MD5Pwd()这个方法，将密码加密，然后后面验证才能通过
-        if ("1".equals(remember)) {
+        if ("1".equals(user.getRemember())) {
             subject.isRemembered();
         }
         try {
@@ -73,9 +70,11 @@ public class HomeIndexController {
         }
         if (subject.isAuthenticated()) {
             // 若登录成功，签发 JWT token
-            String jWTToken = JwtUtil.getToken(username, properties.getSecret(), properties.getExpired());
+            String jWTToken = JwtUtil.getToken(user.getUsername(), properties.getSecret(), properties.getExpired());
             HashMap<String, String> map = new HashMap<>();
-            map.put("token", jWTToken);
+
+            log.info("access_token===>" + jWTToken);
+            map.put("access_token", jWTToken);
             map.put("url", HttpServletUtil.getRequest().getContextPath() + "/");
             return ResultVoUtil.success("登录成功", map);
         } else {
@@ -85,6 +84,7 @@ public class HomeIndexController {
         }
     }
 
+    @IgnorePermissions
     @GetMapping(value = "/loginout")
     public String defaultLoginOut() {
         // 从SecurityUtils里边创建一个 subject

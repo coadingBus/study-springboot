@@ -13,7 +13,8 @@ public enum ResultEnum   {
     /**
      * 通用状态
      */
-    SUCCESS(200, "成功"),
+    SUCCESS_TWO(200, "成功"),
+    SUCCESS_ONE(0, "成功"),
     ERROR(400, "错误"),
 
     /**
